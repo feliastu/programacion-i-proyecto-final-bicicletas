@@ -1,0 +1,71 @@
+classDiagram
+    direction TB
+    class ServicioMantenimiento {
+        <<abstract>>
+        - codigo: str
+        - observacion: str
+        + mostrar_identificacion(): str
+        + describir_trabajo(): str*
+        + calcular_duracion(): int*
+    }
+    class AjusteFrenos {
+        - tipo_freno: str
+        - ruedas: int
+        + describir_trabajo(): str
+        + calcular_duracion(): int
+    }
+    class MantenimientoTransmision {
+        - velocidades: int
+        - limpieza_profunda: bool
+        + describir_trabajo(): str
+        + calcular_duracion(): int
+    }
+    class ReparacionLlanta {
+        - sistema: str
+        - pinchazos: int
+        + describir_trabajo(): str
+        + calcular_duracion(): int
+    }
+    class Cliente {
+        - codigo: str
+        - nombre: str
+        - telefono: str
+        + actualizar_contacto(nombre, telefono)
+        + mostrar_informacion(): str
+    }
+    class Bicicleta {
+        - codigo: str
+        - marca: str
+        - modelo: str
+        - propietario: Cliente
+        + mostrar_informacion(): str
+    }
+    class OrdenServicio {
+        - codigo: str
+        - bicicleta: Bicicleta
+        - servicios: list
+        - estado: str
+        - bitacora: Bitacora
+        - verificar_abierta()
+        + agregar_servicio(servicio)
+        + retirar_servicio(codigo): ServicioMantenimiento
+        + calcular_duracion_total(): int
+        + cerrar()
+        + consultar_movimientos(): tuple
+        + mostrar_bitacora(): str
+        + mostrar_informacion(): str
+    }
+    class Bitacora {
+        - codigo_orden: str
+        - movimientos: list
+        + registrar(descripcion)
+        + consultar(): tuple
+        + mostrar_informacion(): str
+    }
+    ServicioMantenimiento <|-- AjusteFrenos
+    ServicioMantenimiento <|-- MantenimientoTransmision
+    ServicioMantenimiento <|-- ReparacionLlanta
+    Bicicleta "0..*" --> "1" Cliente : propietario
+    OrdenServicio "0..*" --> "1" Bicicleta : bicicleta
+    OrdenServicio "0..*" --> "0..*" ServicioMantenimiento : servicios
+    OrdenServicio "1" *-- "1" Bitacora : contiene

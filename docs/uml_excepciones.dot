@@ -1,0 +1,9 @@
+digraph G { graph [rankdir=TB, bgcolor="white", pad="0.2", nodesep="0.35", ranksep="0.5", splines=polyline]; node [shape=plain, fontname="Liberation Sans", fontsize=13]; edge [fontname="Liberation Sans", fontsize=11, arrowsize=0.9];
+
+node [shape=box, style=filled, fillcolor="#F4F7F9"];
+Exception -> ErrorTaller [dir=back, arrowtail=empty];
+ErrorTaller -> ServicioDuplicadoError [dir=back, arrowtail=empty];
+ErrorTaller -> ServicioNoEncontradoError [dir=back, arrowtail=empty];
+ErrorTaller -> OrdenSinServiciosError [dir=back, arrowtail=empty];
+ErrorTaller -> OrdenCerradaError [dir=back, arrowtail=empty];
+}
