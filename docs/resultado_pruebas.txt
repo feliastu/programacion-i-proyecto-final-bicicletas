@@ -1,0 +1,39 @@
+test_agregar_conserva_los_objetos_y_suma_sus_duraciones (test_taller.PruebasTaller.test_agregar_conserva_los_objetos_y_suma_sus_duraciones) ... ok
+test_asociaciones_rechazan_textos_en_lugar_de_objetos (test_taller.PruebasTaller.test_asociaciones_rechazan_textos_en_lugar_de_objetos) ... ok
+test_bicicleta_conserva_el_objeto_propietario (test_taller.PruebasTaller.test_bicicleta_conserva_el_objeto_propietario) ... ok
+test_bitacora_valida_movimientos_y_mantiene_orden (test_taller.PruebasTaller.test_bitacora_valida_movimientos_y_mantiene_orden) ... ok
+test_bitacoras_y_colecciones_son_independientes_por_orden (test_taller.PruebasTaller.test_bitacoras_y_colecciones_son_independientes_por_orden) ... ok
+test_cada_error_tiene_una_clase_propia (test_taller.PruebasTaller.test_cada_error_tiene_una_clase_propia) ... ok
+test_cerrada_rechaza_alta_retiro_y_segundo_cierre_sin_cambios (test_taller.PruebasTaller.test_cerrada_rechaza_alta_retiro_y_segundo_cierre_sin_cambios) ... ok
+test_cierre_vacio_no_cambia_estado_y_permite_recuperacion (test_taller.PruebasTaller.test_cierre_vacio_no_cambia_estado_y_permite_recuperacion) ... ok
+test_cierre_valido_conserva_servicios_y_registra_cierre (test_taller.PruebasTaller.test_cierre_valido_conserva_servicios_y_registra_cierre) ... ok
+test_constructores_rechazan_datos_vacios (test_taller.PruebasTaller.test_constructores_rechazan_datos_vacios) ... ok
+test_consultas_no_exponen_listas_modificables (test_taller.PruebasTaller.test_consultas_no_exponen_listas_modificables) ... ok
+test_contacto_invalido_conserva_ambos_datos (test_taller.PruebasTaller.test_contacto_invalido_conserva_ambos_datos) ... ok
+test_contacto_valido_actualiza_ambos_datos (test_taller.PruebasTaller.test_contacto_valido_actualiza_ambos_datos) ... ok
+test_duplicado_no_cambia_servicios_tiempo_ni_bitacora (test_taller.PruebasTaller.test_duplicado_no_cambia_servicios_tiempo_ni_bitacora) ... ok
+test_duplicado_se_detecta_por_codigo_aunque_sea_otro_objeto (test_taller.PruebasTaller.test_duplicado_se_detecta_por_codigo_aunque_sea_otro_objeto) ... ok
+test_frenos_rechaza_tipo_y_cantidad_invalidos (test_taller.PruebasTaller.test_frenos_rechaza_tipo_y_cantidad_invalidos) ... ok
+test_frenos_tiene_descripcion_y_tiempo_segun_sus_datos (test_taller.PruebasTaller.test_frenos_tiene_descripcion_y_tiempo_segun_sus_datos) ... ok
+test_llanta_distingue_sistema_y_pinchazos (test_taller.PruebasTaller.test_llanta_distingue_sistema_y_pinchazos) ... ok
+test_llanta_rechaza_sistema_y_pinchazos_invalidos (test_taller.PruebasTaller.test_llanta_rechaza_sistema_y_pinchazos_invalidos) ... ok
+test_main_controla_errores_y_finaliza_con_dos_ordenes (test_taller.PruebasTaller.test_main_controla_errores_y_finaliza_con_dos_ordenes) ... ok
+test_no_se_agregan_objetos_ajenos_al_dominio (test_taller.PruebasTaller.test_no_se_agregan_objetos_ajenos_al_dominio) ... ok
+test_no_se_puede_crear_el_servicio_abstracto (test_taller.PruebasTaller.test_no_se_puede_crear_el_servicio_abstracto) ... ok
+test_normalizacion_de_textos_y_opciones (test_taller.PruebasTaller.test_normalizacion_de_textos_y_opciones) ... ok
+test_orden_inicia_abierta_vacia_y_con_bitacora (test_taller.PruebasTaller.test_orden_inicia_abierta_vacia_y_con_bitacora) ... ok
+test_reporte_admite_otro_servicio_sin_modificarse (test_taller.PruebasTaller.test_reporte_admite_otro_servicio_sin_modificarse) ... ok
+test_retirar_codigo_vacio_no_modifica_la_orden (test_taller.PruebasTaller.test_retirar_codigo_vacio_no_modifica_la_orden) ... ok
+test_retiro_devuelve_objeto_recalcula_tiempo_y_registra (test_taller.PruebasTaller.test_retiro_devuelve_objeto_recalcula_tiempo_y_registra) ... ok
+test_retiro_inexistente_conserva_estado_y_permite_otra_operacion (test_taller.PruebasTaller.test_retiro_inexistente_conserva_estado_y_permite_otra_operacion) ... ok
+test_servicio_retirado_puede_agregarse_nuevamente (test_taller.PruebasTaller.test_servicio_retirado_puede_agregarse_nuevamente) ... ok
+test_servicios_rechazan_codigo_u_observacion_vacios (test_taller.PruebasTaller.test_servicios_rechazan_codigo_u_observacion_vacios) ... ok
+test_subclases_reutilizan_codigo_observacion_e_identificacion (test_taller.PruebasTaller.test_subclases_reutilizan_codigo_observacion_e_identificacion) ... ok
+test_transmision_distingue_limpieza_y_velocidades (test_taller.PruebasTaller.test_transmision_distingue_limpieza_y_velocidades) ... ok
+test_transmision_rechaza_velocidades_y_bandera_invalidas (test_taller.PruebasTaller.test_transmision_rechaza_velocidades_y_bandera_invalidas) ... ok
+test_una_subclase_incompleta_tampoco_se_instancia (test_taller.PruebasTaller.test_una_subclase_incompleta_tampoco_se_instancia) ... ok
+
+----------------------------------------------------------------------
+Ran 34 tests in 0.002s
+
+OK

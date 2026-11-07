@@ -1,0 +1,80 @@
+TALLER DE BICICLETAS - ÓRDENES DE MANTENIMIENTO
+Datos ficticios. Los tiempos son supuestos didácticos, no estándares técnicos.
+
+1. OBJETOS Y ENCAPSULAMIENTO
+C01 - Ana Torres | Teléfono: 000-000-0001
+Contacto actualizado: C01 - Ana María Torres | Teléfono: 000-000-0010
+Referencia compartida: B01 - Marca A Urbana | Propietario: Ana María Torres
+CONTROLADO - ValueError: El teléfono debe ser un texto no vacío.
+CONTINÚA: contacto conservado: C01 - Ana María Torres | Teléfono: 000-000-0010
+
+2. ABSTRACCIÓN
+CONTROLADO - TypeError: ServicioMantenimiento es abstracto.
+CONTINÚA: se utilizan los tres servicios especializados.
+
+3. REPORTE POLIMÓRFICO
+
+F01 | Ajuste de ambas ruedas
+Ajuste de frenos de disco en 2 rueda(s). Observación: Ajuste de ambas ruedas
+Tiempo estimado: 32 minutos
+
+T01 | Limpieza general
+Mantenimiento de transmisión de 7 velocidades con limpieza profunda. Observación: Limpieza general
+Tiempo estimado: 49 minutos
+
+L01 | Llanta trasera
+Reparación de 1 pinchazo(s) en llanta con sistema camara. Observación: Llanta trasera
+Tiempo estimado: 18 minutos
+
+F02 | Ajuste de rueda delantera
+Ajuste de frenos de rin en 1 rueda(s). Observación: Ajuste de rueda delantera
+Tiempo estimado: 12 minutos
+
+T02 | Mantenimiento periódico
+Mantenimiento de transmisión de 9 velocidades con limpieza básica. Observación: Mantenimiento periódico
+Tiempo estimado: 33 minutos
+
+L02 | Llanta delantera
+Reparación de 2 pinchazo(s) en llanta con sistema tubeless. Observación: Llanta delantera
+Tiempo estimado: 36 minutos
+
+4. ÓRDENES Y EXCEPCIONES PERSONALIZADAS
+ALTA CORRECTA: tres servicios en O01.
+Orden O01 | Estado: abierta
+Bicicleta: B01 - Marca A Urbana | Propietario: Ana María Torres
+Servicios: 3 | Duración estimada: 99 minutos
+CONTROLADO - ServicioDuplicadoError: El servicio F01 ya está en la orden O01.
+CONTINÚA: O01 conserva 3 servicios.
+RETIRO CORRECTO: L01 | Total: 81 minutos.
+CONTROLADO - ServicioNoEncontradoError: El servicio S99 no pertenece a la orden O01.
+CONTINÚA: se incorpora nuevamente el servicio L01.
+CONTROLADO - OrdenSinServiciosError: La orden O02 no tiene servicios para cerrar.
+CONTINÚA: O02 sigue abierta y puede recibir servicios.
+CIERRE CORRECTO: O01.
+CONTROLADO - OrdenCerradaError: La orden O01 está cerrada y no admite cambios.
+CONTINÚA: O01 se consulta aunque ya no admite cambios.
+
+5. CONSULTA FINAL Y COMPOSICIÓN
+Orden O01 | Estado: cerrada
+Bicicleta: B01 - Marca A Urbana | Propietario: Ana María Torres
+Servicios: 3 | Duración estimada: 99 minutos
+Bitácora de O01
+1. Orden abierta.
+2. Servicio agregado: F01.
+3. Servicio agregado: T01.
+4. Servicio agregado: L01.
+5. Servicio retirado: L01.
+6. Servicio agregado: L01.
+7. Orden cerrada. 
+
+Orden O02 | Estado: cerrada
+Bicicleta: B02 - Marca B Montaña | Propietario: Luis Rojas
+Servicios: 3 | Duración estimada: 81 minutos
+Bitácora de O02
+1. Orden abierta.
+2. Servicio agregado: F02.
+3. Servicio agregado: T02.
+4. Servicio agregado: L02.
+5. Orden cerrada. 
+
+FIN: ambas órdenes cerradas y todos los errores previstos controlados.
